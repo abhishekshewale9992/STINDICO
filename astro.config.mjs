@@ -8,9 +8,9 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://abhishekshewale9992.github.io/STINDICO/',
-  base: '/STINDICO',
+  site: 'https://stindico.vercel.app',
   trailingSlash: 'always',
+
   image: {
     domains: ['images.unsplash.com'],
   },
