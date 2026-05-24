@@ -3,14 +3,15 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build && node process-html.mjs",
-    "format:check": "prettier --check .",
-    "format:fix": "prettier --write .",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
+  "dev": "astro dev",
+  "start": "astro dev",
+  "build": "astro check && astro build && node process-html.mjs",
+  "deploy": "astro build && gh-pages -d dist",
+  "format:check": "prettier --check .",
+  "format:fix": "prettier --write .",
+  "preview": "astro preview",
+  "astro": "astro"
+},
   "dependencies": {
     "@astrojs/check": "^0.9.8",
     "@astrojs/mdx": "^5.0.3",
@@ -34,6 +35,7 @@
     "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/typography": "^0.5.19",
     "astro-vtbot": "^2.1.12",
+    "gh-pages": "^6.3.0",
     "prettier": "^3.8.2",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
