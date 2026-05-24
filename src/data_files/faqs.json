@@ -1,0 +1,30 @@
+{
+  "subTitle": "Get answers to common questions about our industrial raw materials, quality standards, and bulk supply services.",
+
+  "faqs": [
+    {
+      "question": "What products does STINDICO supply?",
+      "answer": "We supply high-quality Biomass Briquettes, Silica Sand (97%–99%), and Quartz products including lumps, powder, and grits for various industrial applications."
+    },
+    {
+      "question": "What industries do your products serve?",
+      "answer": "Our materials are widely used in industries such as ceramics, glass manufacturing, foundry, construction, food processing, and thermal energy applications."
+    },
+    {
+      "question": "What is the calorific value of your biomass briquettes?",
+      "answer": "Our biomass briquettes typically have a Gross Calorific Value (GCV) of around 3800 kcal/kg (±100), ensuring efficient and stable combustion for industrial use."
+    },
+    {
+      "question": "Do you provide bulk supply and logistics support?",
+      "answer": "Yes, we specialize in bulk supply with a strong logistics network to ensure timely delivery and uninterrupted supply for industrial operations."
+    },
+    {
+      "question": "How do you ensure product quality?",
+      "answer": "We follow strict quality control processes. Products are tested for GCV, moisture content, ash levels, and purity to meet industrial standards and ensure consistent performance."
+    },
+    {
+      "question": "Can products be customized as per requirement?",
+      "answer": "Yes, we offer customization based on client requirements including particle size, purity levels, and product specifications for different industrial applications."
+    }
+  ]
+}

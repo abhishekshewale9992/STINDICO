@@ -1,0 +1,277 @@
+---
+// Importing necessary components
+import MainLayout from '@/layouts/MainLayout.astro';
+import PrimaryCTA from '@components/ui/buttons/PrimaryCTA.astro';
+import CardSmall from '@components/ui/cards/CardSmall.astro';
+import CardWide from '@components/ui/cards/CardWide.astro';
+import FeaturesStatsAlt from '@components/sections/features/FeaturesStatsAlt.astro';
+import TestimonialsSectionAlt from '@components/sections/testimonials/TestimonialsSectionAlt.astro';
+
+// Importing necessary functions from Astro
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import { SITE } from '@data/constants';
+
+// Fetching all the product related content and sorting it by main.id
+const product: CollectionEntry<'products'>[] = (
+  await getCollection('products', ({ id }) => {
+    return id.startsWith('en/');
+  })
+).sort(
+  (a: CollectionEntry<'products'>, b: CollectionEntry<'products'>) =>
+    a.data.main.id - b.data.main.id
+);
+
+const title: string = 'Our Products';
+
+const subTitle: string =
+  'Explore our premium range of industrial raw materials including Biomass Briquettes, Silica Sand, and Quartz products designed for reliable industrial performance.';
+// Testimonial data that will be rendered in the component
+const testimonials = [
+  {
+    content:
+      'STINDICO provides excellent quality silica sand with timely delivery and reliable bulk supply support.',
+
+    author: 'Rahul Sharma',
+
+    role: 'Procurement Manager | Ceramic Industry',
+
+    avatarSrc:
+      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1374&auto=format&fit=crop',
+
+    avatarAlt: 'Rahul Sharma',
+  },
+
+  {
+    content:
+      'The biomass briquettes helped us reduce fuel costs while maintaining high boiler efficiency.',
+
+    author: 'Amit Verma',
+
+    role: 'Operations Head | Food Processing Unit',
+
+    avatarSrc:
+      'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1376&auto=format&fit=crop',
+
+    avatarAlt: 'Amit Verma',
+  },
+
+  {
+    content:
+      'Quartz quality and packaging were excellent. Highly recommended for industrial applications.',
+
+    author: 'Vikas Patil',
+
+    role: 'Industrial Buyer',
+
+    avatarSrc:
+      'https://images.unsplash.com/photo-1474176857210-7287d38d27c6?q=80&w=1470&auto=format&fit=crop',
+
+    avatarAlt: 'Vikas Patil',
+  },
+];
+
+const pageTitle: string = `Products | ${SITE.title}`;
+const metaDescription =
+  'Explore the durability and precision of ScrewFast tools, designed for both professionals and enthusiasts.';
+const ogTitle = 'Hardware Tools | ScrewFast';
+---
+
+<MainLayout
+  title={pageTitle}
+  customDescription={metaDescription}
+  customOgTitle={ogTitle}
+  structuredData={{
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': 'https://screwfast.uk/products',
+    url: 'https://screwfast.uk/products',
+    name: 'Hardware Tools | ScrewFast',
+    description:
+      'Explore the durability and precision of ScrewFast tools, designed for both professionals and enthusiasts.',
+    isPartOf: {
+      '@type': 'WebSite',
+      url: 'https://screwfast.uk',
+      name: 'ScrewFast',
+      description:
+        'ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.',
+    },
+    inLanguage: 'en-US',
+  }}
+>
+  <div
+    class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+  >
+    <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+      <div class="flex items-center gap-12">
+        <h1
+          class="text-2xl font-bold tracking-tight text-balance text-neutral-800 md:text-4xl md:leading-tight dark:text-neutral-200"
+        >
+          {title}
+        </h1>
+        {
+          subTitle && (
+            <p class="hidden max-w-(--breakpoint-sm) text-pretty text-neutral-600 md:block dark:text-neutral-400">
+              {subTitle}
+            </p>
+          )
+        }
+      </div>
+      <PrimaryCTA title="Customer Stories" url="#testimonials" noArrow={true} />
+    </div>
+    {
+      /* Displaying products in alternating styles. Alternative product gets different card styling.
+    Maps through all product entries and displays them with either CardSmall or CardWide based on their position. */
+    }
+    <section class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+      {
+        product.map((product, index) => {
+          const position = index % 4;
+          if (position === 0 || position === 3) {
+            return <CardSmall product={product} />;
+          } else {
+            return <CardWide product={product} />;
+          }
+        })
+      }
+    </section>
+  </div>
+
+
+<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+
+  <div class="mb-10 text-center">
+
+    <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-200">
+      Industrial Machines
+    </h2>
+
+    <p class="mt-3 text-neutral-600 dark:text-neutral-400">
+      STINDICO provides industrial machines and heavy equipment solutions for construction, mining, infrastructure, and industrial applications. Machine details and model specifications are shared personally based on availability and project requirements.
+    </p>
+
+  </div>
+
+  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+
+    <!-- Excavators -->
+    <div class="rounded-2xl border border-neutral-200 p-6 dark:border-neutral-700">
+
+      <img
+        src="/jcb-210.jpeg"
+        alt="Excavators"
+        class="mb-4 h-60 w-full rounded-xl object-cover"
+      />
+
+      <h3 class="text-xl font-semibold text-neutral-800 dark:text-neutral-200">
+        Excavators
+      </h3>
+
+      <p class="mt-2 text-neutral-600 dark:text-neutral-400">
+        Heavy-duty excavator machines suitable for construction, mining, earthmoving, and industrial applications.
+      </p>
+
+    </div>
+
+    <!-- Piling Rigs -->
+    <div class="rounded-2xl border border-neutral-200 p-6 dark:border-neutral-700">
+
+      <img
+        src="/pilling-rig.jpeg"
+        alt="Piling Rigs"
+        class="mb-4 h-60 w-full rounded-xl object-cover"
+      />
+
+      <h3 class="text-xl font-semibold text-neutral-800 dark:text-neutral-200">
+        Piling Rigs
+      </h3>
+
+      <p class="mt-2 text-neutral-600 dark:text-neutral-400">
+        Advanced piling rig equipment designed for foundation work and infrastructure construction projects.
+      </p>
+
+    </div>
+
+    <!-- Mobile Crusher -->
+    <div class="rounded-2xl border border-neutral-200 p-6 dark:border-neutral-700">
+
+      <img
+        src="/mobile-crusher.jpeg"
+        alt="Mobile Crusher"
+        class="mb-4 h-60 w-full rounded-xl object-cover"
+      />
+
+      <h3 class="text-xl font-semibold text-neutral-800 dark:text-neutral-200">
+        Mobile Crusher
+      </h3>
+
+      <p class="mt-2 text-neutral-600 dark:text-neutral-400">
+        Mobile crushing machines suitable for mining, aggregate processing, and industrial material handling.
+      </p>
+
+    </div>
+
+    <!-- Crawler Cranes -->
+    <div class="rounded-2xl border border-neutral-200 p-6 dark:border-neutral-700">
+
+      <img
+        src="/crawler-crane.jpeg"
+        alt="Crawler Cranes"
+        class="mb-4 h-60 w-full rounded-xl object-cover"
+      />
+
+      <h3 class="text-xl font-semibold text-neutral-800 dark:text-neutral-200">
+        Crawler Cranes
+      </h3>
+
+      <p class="mt-2 text-neutral-600 dark:text-neutral-400">
+        High-capacity crawler cranes designed for heavy lifting, infrastructure, and industrial operations.
+      </p>
+
+    </div>
+
+    <!-- Bulldozers -->
+    <div class="rounded-2xl border border-neutral-200 p-6 dark:border-neutral-700">
+
+      <img
+        src="/bulldozer.jpeg"
+        alt="Bulldozers"
+        class="mb-4 h-60 w-full rounded-xl object-cover"
+      />
+
+      <h3 class="text-xl font-semibold text-neutral-800 dark:text-neutral-200">
+        Bulldozers
+      </h3>
+
+      <p class="mt-2 text-neutral-600 dark:text-neutral-400">
+        Powerful bulldozer machines suitable for land clearing, earthmoving, and mining applications.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+  
+  {/* Features statistics section */}
+<FeaturesStatsAlt
+  title="Why Choose STINDICO?"
+  subTitle="STINDICO provides premium-quality industrial raw materials including Biomass Briquettes, Silica Sand, and Quartz products. We focus on reliable supply, consistent quality, and industrial performance for businesses across multiple sectors."
+
+  benefits={[
+    'Reliable bulk supply for industrial operations.',
+    'High-quality raw materials with strict quality assurance.',
+    'Eco-friendly and cost-effective industrial solutions.',
+  ]}
+/>
+  {/* Testimonials section */}
+  <TestimonialsSectionAlt
+    title="What Our Customers Say"
+    testimonials={testimonials}
+  />
+</MainLayout>

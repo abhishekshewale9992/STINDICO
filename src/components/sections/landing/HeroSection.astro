@@ -1,0 +1,77 @@
+---
+// Import dependencies
+import { Image } from 'astro:assets';
+import PrimaryCTA from '@components/ui/buttons/PrimaryCTA.astro';
+import SecondaryCTA from '@components/ui/buttons/SecondaryCTA.astro';
+import ReviewComponent from '@components/ui/blocks/ReviewComponent.astro';
+
+// Props
+const {
+  title,
+  subTitle,
+  primaryBtn,
+  primaryBtnURL,
+  secondaryBtn,
+  secondaryBtnURL,
+  withReview,
+  avatars,
+  starCount,
+  rating,
+  reviews,
+  src,
+  alt,
+} = Astro.props;
+---
+
+<section class="mx-auto grid max-w-[85rem] gap-8 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center lg:px-8 2xl:max-w-full">
+
+  {/* LEFT CONTENT */}
+  <div>
+    <h1 class="text-3xl font-bold text-neutral-800 sm:text-4xl lg:text-6xl dark:text-neutral-200">
+      <Fragment set:html={title} />
+    </h1>
+
+    {subTitle && (
+      <p class="mt-4 text-lg text-neutral-700 lg:w-4/5 dark:text-neutral-400">
+        {subTitle}
+      </p>
+    )}
+
+    {/* Buttons */}
+    <div class="mt-6 flex flex-wrap gap-3">
+      {primaryBtn && <PrimaryCTA title={primaryBtn} url={primaryBtnURL} />}
+      {secondaryBtn && <SecondaryCTA title={secondaryBtn} url={secondaryBtnURL} />}
+    </div>
+
+    {/* Reviews */}
+    {withReview && (
+      <ReviewComponent
+        avatars={avatars}
+        starCount={starCount}
+        rating={rating}
+        reviews={reviews}
+      />
+    )}
+  </div>
+
+  {/* RIGHT IMAGE */}
+  <div class="flex items-center justify-center w-full">
+
+    {
+      src && alt && (
+        <div class="w-full flex justify-center">
+          <Image
+            src={src}
+            alt={alt}
+            class="w-full h-auto object-contain"
+            draggable={false}
+            loading="eager"
+            format="avif"
+          />
+        </div>
+      )
+    }
+
+  </div>
+
+</section>
