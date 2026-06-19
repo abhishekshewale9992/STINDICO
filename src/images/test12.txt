@@ -1,0 +1,20 @@
+{
+"name": "Account Move On Hold Reasons",
+"version": "19.0.1.0.0",
+"depends": ["account"],
+"data": [
+"security/ir.model.access.csv",
+"views/account_move_on_hold_reason_views.xml",
+"views/account_move_view.xml",
+],
+
+
+"assets": {
+"point_of_sale._assets_pos": [
+"account_move_on_hold/static/src/xml/order_receipt.xml",
+],
+},
+
+
+"installable": True,
+}

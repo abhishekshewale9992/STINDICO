@@ -6,14 +6,18 @@ import starlight from '@astrojs/starlight';
 
 import mdx from '@astrojs/mdx';
 
-// https://astro.build/config
 export default defineConfig({
   site: 'https://stindico.vercel.app',
-  trailingSlash: 'always',
+  trailingSlash: 'ignore',
 
   image: {
-    domains: ['images.unsplash.com'],
-  },
+  remotePatterns: [
+    {
+      protocol: 'https',
+      hostname: 'images.unsplash.com',
+    },
+  ],
+},
   // i18n: {
   //   defaultLocale: "en",
   //   locales: ["en", "fr"],

@@ -21,10 +21,10 @@ import dashboard from '@images/dashboard-image.avif';
 import { partnersData } from '@/data_files/constants';
 
 const avatarSrcs: Array<string> = [
-  'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80',
-  'https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80',
-  'https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80',
-  'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80',
+  '/avatar.png',
+  '/avatar.png',
+  '/avatar.png',
+  '/avatar.png',
 ];
 ---
 
@@ -50,12 +50,13 @@ const avatarSrcs: Array<string> = [
   src={heroImage}
   alt="Industrial materials display"
 />
-
-  <ClientsSection
-    title="Trusted by Industrial Buyers Across India"
-    subTitle="Experience the reliability chosen by industry giants."
-    partners={partnersData}
-  />
+{/*
+<ClientsSection
+  title="Trusted by Industrial Buyers Across India"
+  subTitle="Experience the reliability chosen by industry giants."
+  partners={partnersData}
+/>
+*/}
 
   <FeaturesGeneral
   title="Meeting Industrial Material Demands"
@@ -103,23 +104,21 @@ Our focus is to deliver consistent quality, reliable bulk supply, and cost-effec
   subTitle="STINDICO is a reliable partner for industries requiring consistent quality, bulk supply, and cost-effective raw materials solutions."
 
   testimonials={[
-    {
-      content:
-        'We have been sourcing silica sand from STINDICO, and the quality consistency is excellent. Their timely delivery helps us maintain smooth production operations.',
-      author: 'Rahul Sharma',
-      role: 'Procurement Manager | Ceramic Industry',
-      avatarSrc:
-        'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=facearea&facepad=2&w=320&h=320&q=80',
-    },
-    {
-      content:
-        'STINDICO’s biomass briquettes helped us reduce fuel costs significantly while maintaining high efficiency in our boilers. Highly recommended supplier.',
-      author: 'Amit Verma',
-      role: 'Operations Head | Food Processing Unit',
-      avatarSrc:
-        'https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?auto=format&fit=facearea&facepad=2&w=320&h=320&q=80',
-    }
-  ]}
+  {
+    content:
+      'We have been sourcing silica sand from STINDICO, and the quality consistency is excellent. Their timely delivery helps us maintain smooth production operations.',
+    author: 'Rahul Sharma',
+    role: 'Procurement Manager | Ceramic Industry',
+    avatarSrc: '/Biomass.png',
+  },
+  {
+    content:
+      'STINDICO’s biomass briquettes helped us reduce fuel costs significantly while maintaining high efficiency in our boilers. Highly recommended supplier.',
+    author: 'Amit Verma',
+    role: 'Operations Head | Food Processing Unit',
+    avatarSrc: '/Biomass.png',
+  },
+]}
 
   statistics={[
     {
@@ -143,13 +142,11 @@ Our focus is to deliver consistent quality, reliable bulk supply, and cost-effec
     },
   ]}
 />
-  <PricingSection pricing={pricing} />
+  {/*
+<PricingSection pricing={pricing} />
+*/}
 
   <FAQ title="Frequently<br />asked questions" faqs={faqs} />
 
-  <HeroSectionAlt
-  title="Need Bulk Industrial Raw Materials?"
-  subTitle="Get in touch with STINDICO for high-quality Biomass Briquettes, Silica Sand, and Quartz. Fast response. Reliable supply."
-  url="https://wa.me/919527746650"
-/>
+  
 </MainLayout>

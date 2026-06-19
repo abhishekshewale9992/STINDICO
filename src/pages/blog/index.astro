@@ -158,123 +158,29 @@ const ogTitle = 'Industrial Raw Materials Blog | STINDICO';
 
   </section>
 
-  <!-- Blog Grid -->
-  <section
-    class="mx-auto max-w-[85rem] px-4 py-14 sm:px-6 lg:px-8"
-  >
+  {/*
+<!-- Blog Grid -->
+<section
+  class="mx-auto max-w-[85rem] px-4 py-14 sm:px-6 lg:px-8"
+>
+  ...
+</section>
 
-    <div class="mb-10">
+<!-- Featured Blog -->
+<section
+  class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8"
+>
+  ...
+</section>
 
-      <h2
-        class="text-3xl font-bold text-neutral-800 dark:text-neutral-200"
-      >
-        Latest Industrial Articles
-      </h2>
+<!-- Insights Section -->
+<section
+  class="mx-auto max-w-[85rem] px-4 py-14 sm:px-6 lg:px-8"
+>
+  ...
+</section>
+*/}
 
-      <p
-        class="mt-3 text-neutral-600 dark:text-neutral-400"
-      >
-        Discover industrial raw material insights, biomass fuel applications, silica sand uses, and industrial machinery updates.
-      </p>
 
-    </div>
-
-    <div class="grid gap-6 lg:grid-cols-2">
-
-      {otherPosts.map(blogEntry => (
-        <CardBlog blogEntry={blogEntry} />
-      ))}
-
-    </div>
-
-  </section>
-
-  <!-- Featured Blog -->
-  <section
-    class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8"
-  >
-
-    <div class="mb-10">
-
-      <h2
-        class="text-3xl font-bold text-neutral-800 dark:text-neutral-200"
-      >
-        Featured Industrial Insight
-      </h2>
-
-    </div>
-
-    <CardBlogRecent blogEntry={mostRecentPost} />
-
-  </section>
-
-  <!-- Insights Section -->
-  <section
-    class="mx-auto max-w-[85rem] px-4 py-14 sm:px-6 lg:px-8"
-  >
-
-    <div class="mx-auto mb-12 max-w-2xl text-center">
-
-      <h2
-        class="text-3xl font-bold text-neutral-800 dark:text-neutral-200"
-      >
-        {secondTitle}
-      </h2>
-
-      <p
-        class="mt-4 text-neutral-600 dark:text-neutral-400"
-      >
-        {secondSubTitle}
-      </p>
-
-    </div>
-
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-
-      {
-        insightPosts.map(insightEntry => (
-          <CardInsight insightEntry={insightEntry} />
-        ))
-      }
-
-    </div>
-
-  </section>
-
-  <!-- Bottom CTA -->
-  <section
-    class="mx-auto max-w-[85rem] px-4 pb-20 sm:px-6 lg:px-8"
-  >
-
-    <div
-      class="rounded-3xl bg-neutral-900 px-8 py-16 text-center"
-    >
-
-      <h2
-        class="text-3xl font-bold text-white md:text-4xl"
-      >
-        Need Reliable Industrial Raw Materials?
-      </h2>
-
-      <p
-        class="mx-auto mt-4 max-w-2xl text-neutral-300"
-      >
-        STINDICO provides high-quality Biomass Briquettes, Silica Sand, Quartz Products, and industrial bulk supply solutions across India.
-      </p>
-
-      <div class="mt-8">
-
-        <a
-          href="/contact"
-          class="inline-flex items-center rounded-lg bg-orange-600 px-8 py-4 text-lg font-medium text-white hover:bg-orange-700"
-        >
-          Contact Sales Team
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
 
 </MainLayout>
