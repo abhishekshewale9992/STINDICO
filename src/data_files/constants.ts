@@ -1,5 +1,3 @@
-
-
 export const SITE = {
   title: 'STINDICO',
   tagline: 'Trade with Trust',
