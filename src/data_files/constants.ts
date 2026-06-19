@@ -1,15 +1,14 @@
-import ogImageSrc from '@images/social.png';
 import ogImageSrc from '../public/logo1.jpeg';
 
 export const SITE = {
-  title: 'Stindico',
-  tagline: 'Top-quality Hardware Tools',
+  title: 'STINDICO',
+  tagline: 'Trade with Trust',
   description:
-    'ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs. Start exploring and contact our sales team for superior quality and reliability.',
+    'STINDICO supplies Biomass Briquettes, Silica Sand, Quartz Products, Industrial Machines and Bulk Industrial Raw Materials across India.',
   description_short:
-    'ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.',
-  url: 'https://screwfast.uk',
-  author: 'Emil Gulamov',
+    'Industrial Raw Material Supplier Across India.',
+  url: 'https://stindico.vercel.app',
+  author: 'STINDICO',
 };
 
 export const SEO = {
@@ -32,36 +31,35 @@ export const SEO = {
   },
 };
 
-export const SITE = {
-  title: 'STINDICO',
-  tagline: 'Trade with Trust',
+export const OG = {
+  locale: 'en_US',
+  type: 'website',
+  url: SITE.url,
+  title: 'STINDICO | Trade with Trust',
   description:
-    'STINDICO supplies Biomass Briquettes, Silica Sand, Quartz Products, Industrial Machines and Bulk Industrial Raw Materials across India.',
-  description_short:
-    'Industrial Raw Material Supplier Across India.',
-  url: 'https://stindico.vercel.app',
-  author: 'STINDICO',
+    'Leading supplier of Biomass Briquettes, Silica Sand, Quartz Products, Industrial Machines and Bulk Industrial Materials.',
+  image: ogImageSrc,
 };
 
 export const partnersData = [
   {
-    name: "Core Team",
-    img: "/logo-coreteam.jpg",
-    href: "#"
+    name: 'Core Team',
+    img: '/logo-coreteam.jpg',
+    href: '#',
   },
   {
-    name: "Client 2",
-    img: "/unnamed.png",
-    href: "#"
+    name: 'Client 2',
+    img: '/unnamed.png',
+    href: '#',
   },
   {
-    name: "Cipla",
-    img: "/cipla.png",
-    href: "#"
+    name: 'Cipla',
+    img: '/cipla.png',
+    href: '#',
   },
   {
-  name: "Aditya Birla",
-  img: "/aditya-birla.png",  // 👈 extension change important
-  href: "#"
-}
+    name: 'Aditya Birla',
+    img: '/aditya-birla.png',
+    href: '#',
+  },
 ];
