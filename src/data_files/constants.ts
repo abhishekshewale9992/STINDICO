@@ -1,5 +1,5 @@
 import ogImageSrc from '@images/social.png';
-import coreLogo from '@images/logo-coreteam.jpg';
+import ogImageSrc from '../public/logo1.jpeg';
 
 export const SITE = {
   title: 'Stindico',
@@ -32,14 +32,15 @@ export const SEO = {
   },
 };
 
-export const OG = {
-  locale: 'en_US',
-  type: 'website',
-  url: SITE.url,
-  title: `${SITE.title}: : Hardware Tools & Construction Services`,
+export const SITE = {
+  title: 'STINDICO',
+  tagline: 'Trade with Trust',
   description:
-    "Equip your projects with ScrewFast's top-quality hardware tools and expert construction services. Trusted by industry leaders, ScrewFast offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
-  image: ogImageSrc,
+    'STINDICO supplies Biomass Briquettes, Silica Sand, Quartz Products, Industrial Machines and Bulk Industrial Raw Materials across India.',
+  description_short:
+    'Industrial Raw Material Supplier Across India.',
+  url: 'https://stindico.vercel.app',
+  author: 'STINDICO',
 };
 
 export const partnersData = [
