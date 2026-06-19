@@ -1,4 +1,4 @@
-// An array of links for navigation bar
+// Navigation links
 const navBarLinks = [
   { name: 'Home', url: '/' },
   { name: 'Products', url: '/products' },
@@ -6,7 +6,17 @@ const navBarLinks = [
   { name: 'Blog', url: '/blog' },
   { name: 'Contact', url: '/contact' },
 ];
-// An array of links for footer
+
+// Social links
+const socialLinks = {
+  facebook: 'https://www.facebook.com/',
+  x: 'https://www.instagram.com/stindico.in?igsh=ZzdsNHpzdG82Mmpj',
+  github: 'https://github.com/abhishekshewale9992/STINDICO',
+  google: 'https://www.linkedin.com/in/stindico-trade-with-trust-768baa406',
+  slack: 'https://www.stindico.com',
+};
+
+// Footer links
 const footerLinks = [
   {
     section: 'Ecosystem',
@@ -26,15 +36,6 @@ const footerLinks = [
     ],
   },
 ];
-const socialLinks = {
-facebook: 'https://www.facebook.com/',
-instagram: 'https://www.instagram.com/stindico.in?igsh=ZzdsNHpzdG82Mmpj',
-linkedin: 'https://www.linkedin.com/in/stindico-trade-with-trust-768baa406',
-github: '',
-google: 'https://www.google.com/',
-slack: 'https://slack.com/',
-};
-
 
 export default {
   navBarLinks,
