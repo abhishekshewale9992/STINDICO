@@ -1,3 +1,5 @@
+
+
 export const SITE = {
   title: 'STINDICO',
   tagline: 'Trade with Trust',
@@ -41,13 +43,8 @@ export const OG = {
 
 export const partnersData = [
   {
-    name: 'Core Team',
-    img: '/logo-coreteam.jpg',
-    href: '#',
-  },
-  {
-    name: 'Client 2',
-    img: '/unnamed.png',
+    name: 'Warana',
+    img: '/warana.png',
     href: '#',
   },
   {
