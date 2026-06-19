@@ -2,7 +2,6 @@
 import { getImage } from 'astro:assets';
 import { OG, SEO, SITE } from '@data/constants';
 
-// Default properties
 const defaultProps = {
   meta: SITE.description,
   structuredData: SEO.structuredData,
@@ -37,28 +36,35 @@ const socialImageRes = await getImage({
 
 const socialImage = Astro.url.origin + socialImageRes.src;
 
-const languages = {
+const languages: { [key: string]: string } = {
   en: '',
   fr: 'fr',
 };
 
-function createHref(lang, prefix, path) {
+function createHref(
+  lang: string,
+  prefix: string,
+  path: string
+): string {
   const cleanPath = path.replace(/^\/(fr|en)\//, '/');
+
   const basePath = prefix ? `/${prefix}${cleanPath}` : cleanPath;
   const normalizedBasePath = basePath.replace(/\/\/+/g, '/');
+
   return `${siteURL.slice(0, -1)}${normalizedBasePath}`;
 }
 
-const fullPath = Astro.url.pathname;
+const fullPath: string = Astro.url.pathname;
 
-const alternateLanguageLinks = Object.entries(languages)
-  .map(([lang, prefix]) => {
+const alternateLanguageLinks: string = Object.entries(languages)
+  .map(([lang, prefix]: [string, string]) => {
     const cleanPath = fullPath.replace(/^\/(fr|en)\//, '/');
-    const href = createHref(lang, prefix, cleanPath);
+    const href: string = createHref(lang, prefix, cleanPath);
+
     return `<link rel="alternate" hreflang="${lang}" href="${href}" />`;
   })
   .join('\n');
----
+--- 
 
 {structuredData && (
   <script

@@ -26,14 +26,15 @@ const footerLinks = [
     ],
   },
 ];
-// An object of links for social icons
 const socialLinks = {
-  facebook: 'https://www.facebook.com/',
-  x: 'https://twitter.com/',
-  github: 'https://github.com/mearashadowfax/ScrewFast',
-  google: 'https://www.google.com/',
-  slack: 'https://slack.com/',
+facebook: 'https://www.facebook.com/',
+instagram: 'https://www.instagram.com/stindico.in?igsh=ZzdsNHpzdG82Mmpj',
+linkedin: 'https://www.linkedin.com/in/stindico-trade-with-trust-768baa406',
+github: '',
+google: 'https://www.google.com/',
+slack: 'https://slack.com/',
 };
+
 
 export default {
   navBarLinks,
