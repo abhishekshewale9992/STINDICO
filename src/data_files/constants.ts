@@ -1,4 +1,4 @@
-import ogImageSrc from '../public/logo1.jpeg';
+
 
 export const SITE = {
   title: 'STINDICO',
@@ -38,7 +38,7 @@ export const OG = {
   title: 'STINDICO | Trade with Trust',
   description:
     'Leading supplier of Biomass Briquettes, Silica Sand, Quartz Products, Industrial Machines and Bulk Industrial Materials.',
-  image: ogImageSrc,
+  image: '/logo1.jpeg',
 };
 
 export const partnersData = [
