@@ -1,4 +1,4 @@
-
+import { stindicoSchema } from './seoSchema';
 
 export const SITE = {
   title: 'STINDICO',
@@ -7,28 +7,14 @@ export const SITE = {
     'STINDICO supplies Biomass Briquettes, Silica Sand, Quartz Products, Industrial Machines and Bulk Industrial Raw Materials across India.',
   description_short:
     'Industrial Raw Material Supplier Across India.',
-  url: 'https://stindico.vercel.app',
+  url: 'https://stindico.com/',
   author: 'STINDICO',
 };
 
 export const SEO = {
   title: SITE.title,
   description: SITE.description,
-  structuredData: {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    inLanguage: 'en-US',
-    '@id': SITE.url,
-    url: SITE.url,
-    name: SITE.title,
-    description: SITE.description,
-    isPartOf: {
-      '@type': 'WebSite',
-      url: SITE.url,
-      name: SITE.title,
-      description: SITE.description,
-    },
-  },
+  structuredData: stindicoSchema,
 };
 
 export const OG = {
